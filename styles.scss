@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  body {
+    font-family: Space Grotesk, sans-serif;
+    background-image: url(./images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 30vw 100vh;
+    display: flex;
+    height: 100vh;
+    justify-content: end;
+    align-items: center;
+  }
+}
+
+.front-card {
+  width: 19.9em;
+  height: 10.9em;
+  border-radius: 8px;
+  padding: 1.2em;
+  background-image: url(./images/bg-card-front.png);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 19%;
+  left: 11%;
+  z-index: 2;
+
+  &__big {
+    background-color: white;
+    width: 2em;
+    height: 2em;
+    border-radius: 50px;
+
+  }
+  &__small {
+    background-color: transparent;
+    width: 1em;
+    height: 1em;
+    border-radius: 50px;
+    border: 1px solid white;
+  }
+}
+
+.circles-container {
+  width: 3.7em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details {
+  color: white;
+
+  &__container {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: .8em;
+  }
+}
+
+.back-card {
+  width: 19.9em;
+  height: 10.9em;
+  border-radius: 8px;
+  background-image: url(./images/bg-card-back.png);
+  background-size: contain;
+  position: absolute;
+  bottom: 19%;
+  left: 16%;
+  z-index: 1;
+
+  &__cvc-display {
+    position: absolute;
+    color: white;
+    font-size: .8em;
+    top: 45%;
+    right: 13%;
+  }
+}
+
+.card-details {
+  display: flex;
+  height: auto;
+  padding: 1em;
+  position: relative;
+  left: -10%;
+  flex-direction: column;
+
+  button {
+    width: 100%;
+    height: 2.6em;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+  }
+
+  input {
+    width: 100%;
+    height: 100%; 
+    border-radius: 5px; 
+    outline: none;
+    border: 1px solid hsl(270, 3%, 87%);
+    padding-left: 1em;
+  }
+
+  .input {
+    width: 22.1em;
+    height: 2.2em;
+
+    #numberErrorMessage {
+      position: relative;
+      bottom: 50%;
+      font-size: .6em;
+      color: hsl(0, 100%, 66%);
+    }
+  }
+
+  .input:hover,
+  .input-2:hover,
+  .input-3:hover { 
+    border-radius: 6px;
+    padding: .05em;
+    background-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  }
+
+  label {
+    font-size: .6em;
+    color: hsl(278, 68%, 11%);
+    margin-top: 2.5em;
+    margin-bottom: .5em;
+  }
+
+  .date-cvc {
+    display: flex;
+    flex-direction: row;
+
+    label {
+      display: block;
+    }
+
+    .input-2-container {
+      display: flex;
+      flex-direction: row;
+
+      .input-2 {
+        width: 4.7em;
+        height: 2.2em;
+        margin-right: .5em;
+
+        #dateErrorMessage {
+          position: relative;
+          bottom: -10%;
+          font-size: .6em;
+          color: hsl(0, 100%, 66%);
+        }
+      }
+    }
+
+    .cvc-container {
+      label {
+        margin-left: .5em;
+      }
+
+      .input-3 {
+        width: 11.2em;
+        height: 2.2em;
+        margin-left: .5em;
+
+        #cvcErrorMessage {
+          position: relative;
+          bottom: -10%;
+          font-size: .6em;
+          color: hsl(0, 100%, 66%);
+        }
+      }
+    }
+  }
+
+  #name, #number, .date-cvc {
+    margin-bottom: 1.5em;
+  }
+
+
+  .date {
+    width: 100%;
+    height: 100%;
+    margin-right: .5em;
+  }
+  #cvc {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.invalid {
+  padding: .05em;
+  border-radius: 6px;
+  background-image: linear-gradient(hsl(0, 100%, 66%), hsl(0, 100%, 66%))!important;
+}

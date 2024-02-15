@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Interactive card details form</title>
+</head>
+<body>
+  <div class="front-card">
+    <div class="circles-container">
+      <div class="front-card__big"></div>
+      <div class="front-card__small"></div>
+    </div>
+    
+    <div class="details">
+      <div id="number-display" style="font-size: 1.5em;">0000 0000 0000 0000</div>
+      <div class="details__container">
+        <div id="name-display">JANE APPLESEED</div>
+        <div id="date-display">00/00</div>
+      </div>
+    </div>
+  </div>
+  <div class="back-card">
+    <div id="cvc-display" class="back-card__cvc-display">000</div>
+  </div>
+
+  <div class="card-details">
+    <label for="name">
+      CARDHOLDER NAME
+    </label>
+    <div class="input">
+      <input
+        type="text"
+        id="name"
+        placeholder="e.g. Jane Appleseed"
+      >      
+    </div>
+    <label for="number">
+      CARD NUMBER
+    </label>
+    <div id="errorColor" class="input">
+      <input
+        type="text"
+        id="number"
+        placeholder="e.g. 1234 5678 9123 0000"
+        maxlength="16"
+      > 
+      <div id="numberErrorMessage"></div>
+    </div>
+ 
+    <div class="date-cvc">
+      <div class="date-container">
+        <label for="date">
+          EXP. DATE (MM/YY)
+        </label>
+        <div class="input-2-container">
+          <div id="errorColor3" class="input-2">
+            <input
+              type="text"
+              class="date"
+              id="monthInput"
+              placeholder="MM"
+              maxlength="2"
+            >   
+            <div id="dateErrorMessage"></div>       
+          </div>
+          <div id="errorColor2" class="input-2">
+            <input
+              type="year"
+              class="date"
+              id="yearInput"
+              placeholder="YY"
+              maxlength="2"
+            >        
+          </div>          
+        </div>
+
+      </div>
+      <div class="cvc-container">
+        <label for="cvc">
+          CVC
+        </label> 
+        <div id="errorColor4" class="input-3">
+          <input
+            type="text"
+            id="cvc"
+            placeholder="e.g. 123"
+            maxlength="3"
+          >  
+          <div id="cvcErrorMessage"></div>       
+        </div>
+      </div> 
+    </div>
+    <button>Confirm</button>
+  </div>
+
+
+  <!-- Completed state start -->
+</body>
+<script src="./main.js"></script>
+</html>
