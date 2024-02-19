@@ -65,6 +65,10 @@
   }
 }
 
+#number-display {
+  font-size: 1.5em;
+}
+
 .back-card {
   width: 19.9em;
   height: 10.9em;
@@ -96,10 +100,16 @@
   button {
     width: 100%;
     height: 2.6em;
+    font-size: 1em;
     border-radius: 5px;
     border: none;
     background-color: hsl(278, 68%, 11%);
     color: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: hsla(278, 68%, 11%, .7);
   }
 
   input {
@@ -204,4 +214,83 @@
   padding: .05em;
   border-radius: 6px;
   background-image: linear-gradient(hsl(0, 100%, 66%), hsl(0, 100%, 66%))!important;
+}
+
+.completed {
+  width: 21.5em;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
+
+  img {
+    width: 25%;
+    padding: .5em 0;
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: 500;
+    letter-spacing: .1em;
+    padding: .5em 0 .2em;
+    color: hsl(278, 68%, 11%);
+  }
+  h4 {
+    font-weight: 500;
+    padding:0 0 1em;
+    color: hsl(279, 6%, 55%);
+  }
+
+  button {
+    height: 3em;
+    font-size: 1em;
+    width: 90%;
+    margin-top: 1em;
+  }
+
+  button:hover {
+    background-color: hsla(278, 68%, 11%, .7);
+  }
+}
+
+
+@media (max-width: 700px) {
+  body {
+    background-image: url(./images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 110vw 40vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .front-card {
+    width: 17.9em;
+    height: 9.85em;
+    left: 4%;
+    top: 23.4%;
+  }
+
+  .details {
+    &__container {
+      margin-top: 1.6em;
+      font-size: .6em;
+    }
+  }
+
+  #number-display {
+    font-size: 1.37em;
+  }
+
+  .back-card {
+    width: 17.9em;
+    height: 9.85em;
+    left: 19%;
+    top: 10%;
+  }
+
+  .card-details {
+    left: 0%;
+    margin-top: 70%;
+  }
 }
